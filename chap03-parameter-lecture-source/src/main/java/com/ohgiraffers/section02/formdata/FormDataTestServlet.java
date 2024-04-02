@@ -1,4 +1,4 @@
-package com.ohgiraffers.section01.section2.formdata;
+package com.ohgiraffers.section02.formdata;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
