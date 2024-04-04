@@ -5,6 +5,7 @@ import jakarta.servlet.annotation.WebFilter;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
@@ -42,12 +43,18 @@ public class LoginFilter implements Filter {
         String password = "qwer1234";
             if(name.equals(userName) && password.equals(userPassword)){
                 System.out.println("성공");
-                servletResponse1.sendRedirect("/jsp/loginSuccess.jsp");
+                servletRequest1.setAttribute("userName",userName);
+                String contextPath = servletRequest1.getContextPath();
+                servletResponse1.sendRedirect(contextPath +"/jsp/loginSuccess.jsp");
             } else {
                 System.out.println("실패");
-                servletResponse1.sendRedirect("/jsp/loginFailed.jsp");
+                String contextPath = servletRequest1.getContextPath();
+                servletResponse1.sendRedirect(contextPath + "/jsp/loginFailed.jsp");
+                System.out.println("실패");
+
             }
         filterChain.doFilter(servletRequest, servletResponse);
+
     }
 
     @Override

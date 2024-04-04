@@ -6,5 +6,9 @@
 </head>
 <body>
     <h1>성공!!!!</h1>
+    <%
+        String userName = (String) request.getAttribute("userName");
+    %>
+    <h2><%=userName%>님 환영합니다!!</h2>
 </body>
 </html>

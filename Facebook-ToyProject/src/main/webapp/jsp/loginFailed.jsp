@@ -11,6 +11,6 @@
     <title>실패요~</title>
 </head>
 <body>
-    <h1>실패!!!!</h1>
+    <img src="https://gi.esmplus.com/yoonbusi77/CYWORLD/jjgleft.gif">
 </body>
 </html>
